@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.539
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "opengl_playground", "opengl_playground\opengl_playground.vcxproj", "{660A80D6-30CF-44A6-9109-54A74CD99D7C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{660A80D6-30CF-44A6-9109-54A74CD99D7C}.Debug|x64.ActiveCfg = Debug|x64
+		{660A80D6-30CF-44A6-9109-54A74CD99D7C}.Debug|x64.Build.0 = Debug|x64
+		{660A80D6-30CF-44A6-9109-54A74CD99D7C}.Debug|x86.ActiveCfg = Debug|Win32
+		{660A80D6-30CF-44A6-9109-54A74CD99D7C}.Debug|x86.Build.0 = Debug|Win32
+		{660A80D6-30CF-44A6-9109-54A74CD99D7C}.Release|x64.ActiveCfg = Release|x64
+		{660A80D6-30CF-44A6-9109-54A74CD99D7C}.Release|x64.Build.0 = Release|x64
+		{660A80D6-30CF-44A6-9109-54A74CD99D7C}.Release|x86.ActiveCfg = Release|Win32
+		{660A80D6-30CF-44A6-9109-54A74CD99D7C}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1E091740-6D11-4821-93E6-41989E2F19E5}
+	EndGlobalSection
+EndGlobal
