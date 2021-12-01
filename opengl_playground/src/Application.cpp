@@ -8,10 +8,18 @@
 float vertices[] = {
 -0.5f, -0.5f, 0.0f,
  0.5f, -0.5f, 0.0f,
- 0.0f,  0.5f, 0.0f
+ 0.0f,  0.5f, 0.0f,
+ /*0.5f, -0.5f, 0.0f,
+ 0.0f,  0.5f, 0.0f,*/
+ 0.8f,  0.8f, 0.0f
 };
 
-const char* vertexShaderSource = 
+unsigned int indices[] = {
+	0,1,2,
+	2,1,3
+};
+
+const char* vertexShaderSource =
 "#version 330 core \n "
 "layout(location = 0) in vec3 aPos; \n"
 "void main() { gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0); } \n";
@@ -53,6 +61,8 @@ int main() {
 	}
 
 	glViewport(0, 0, 800, 600);
+	glEnable(GL_CULL_FACE);
+	glCullFace(GL_BACK);
 
 
 	unsigned int VAO;
@@ -61,8 +71,13 @@ int main() {
 
 	unsigned int VBO;
 	glGenBuffers(1, &VBO);
-	glBindBuffer(GL_ARRAY_BUFFER,VBO);
+	glBindBuffer(GL_ARRAY_BUFFER, VBO);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+
+	unsigned int EBO;
+	glGenBuffers(1, &EBO);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 
 	unsigned int vertexShader;
 	vertexShader = glCreateShader(GL_VERTEX_SHADER);
@@ -100,7 +115,13 @@ int main() {
 
 		glBindVertexArray(VAO);
 		glUseProgram(shaderProgram);
-		glDrawArrays(GL_TRIANGLES, 0, 3);
+
+		// VAO
+		//glDrawArrays(GL_TRIANGLES, 0, 6);
+
+		//VBO
+		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,EBO);
+		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
 		glfwPollEvents();
 		glfwSwapBuffers(window);
