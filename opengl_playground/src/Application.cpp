@@ -3,7 +3,7 @@
 #include <GLFW/glfw3.h>
 
 #include <iostream>
-
+#include "Shader.h"
 
 float vertices[] = {
 -0.5f, -0.5f, 0.0f,1.0f,0,0,
@@ -45,6 +45,7 @@ void processInput(GLFWwindow* window)
 }
 
 int main() {
+	Shader* shader = new Shader("vertex.txt", "fragment.txt");
 	glfwInit();
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
