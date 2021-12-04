@@ -8,6 +8,10 @@
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
 
+#include <glm.hpp>
+#include <gtc/matrix_transform.hpp>
+#include <gtc/type_ptr.hpp>
+
 float vertices[] = {
 	//     ---- 位置 ----       ---- 颜色 ----     - 纹理坐标 -
 		 0.5f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f,   1.0f, 1.0f,   // 右上
@@ -111,8 +115,22 @@ int main() {
 		std::cout << "load texture error" << std::endl;
 	}
 
+	glm::mat4 trans = glm::mat4(1.0f);
+	// t r s
+	//trans = glm::translate(trans, glm::vec3(-1.0f, 0, 0));
+	//trans = glm::rotate(trans, glm::radians(45.0f), glm::vec3(0, 0, 1.0f));
+	//trans = glm::scale(trans, glm::vec3(1.0f, 1.0f, 1.0f));
+
+
+
+	/*trans = glm::rotate(trans, glm::radians(90.0f), glm::vec3(0, 0, 1.0f));
+	trans = glm::scale(trans, glm::vec3(0.5f, 0.5f, 0.5f));*/
+	trans = glm::translate(trans, glm::vec3(0.5f, -0.5f, 0.0f));
+
 	while (!glfwWindowShouldClose(window)) {
 		processInput(window);
+
+		trans = glm::rotate(trans, (float)glfwGetTime(), glm::vec3(0.0f, 0.0f, 1.0f));
 
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
@@ -132,6 +150,8 @@ int main() {
 
 		glUniform1i(glGetUniformLocation(shader->ID, "sampler"), 0);
 		glUniform1i(glGetUniformLocation(shader->ID, "sampler2"), 1);
+
+		glUniformMatrix4fv(glGetUniformLocation(shader->ID, "transform"), 1, GL_FALSE, glm::value_ptr(trans));
 
 		
 
