@@ -44,13 +44,13 @@ Shader::Shader(const char* vertexPath,const char* fragmentPath)
 		fragment = glCreateShader(GL_FRAGMENT_SHADER);
 		glShaderSource(fragment, 1, &fragmentSource, NULL);
 		glCompileShader(fragment);
-		checkCompileErrors(vertex, "FRAGMENT");
+		checkCompileErrors(fragment, "FRAGMENT");
 
 		ID = glCreateProgram();
 		glAttachShader(ID, vertex);
 		glAttachShader(ID, fragment);
 		glLinkProgram(ID);
-		checkCompileErrors(vertex, "PROGRAM");
+		checkCompileErrors(ID, "PROGRAM");
 
 		glDeleteShader(vertex);
 		glDeleteShader(fragment);
