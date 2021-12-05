@@ -37,10 +37,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="fragment.txt">
+    <Text Include="fragment.frag">
       <Filter>头文件</Filter>
     </Text>
-    <Text Include="vertex.txt">
+    <Text Include="vertex.vert">
       <Filter>头文件</Filter>
     </Text>
   </ItemGroup>

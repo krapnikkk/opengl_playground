@@ -141,8 +141,8 @@
     <ClInclude Include="src\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="fragment.txt" />
-    <Text Include="vertex.txt" />
+    <Text Include="fragment.frag" />
+    <Text Include="vertex.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
