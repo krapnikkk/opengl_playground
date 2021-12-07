@@ -115,6 +115,28 @@ void processInput(GLFWwindow* window)
 	else {
 		camera.SpeedZ = 0;
 	}
+
+	if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
+	{
+		camera.SpeedX = -1.0f;
+	}
+	else if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) {
+		camera.SpeedX = 1.0f;
+	}
+	else {
+		camera.SpeedX = 0;
+	}
+
+	if (glfwGetKey(window, GLFW_KEY_Q) == GLFW_PRESS)
+	{
+		camera.SpeedY = 1.0f;
+	}
+	else if (glfwGetKey(window, GLFW_KEY_E) == GLFW_PRESS) {
+		camera.SpeedY = -1.0f;
+	}
+	else {
+		camera.SpeedY = 0;
+	}
 }
 #pragma endregion
 

@@ -17,6 +17,7 @@ uniform mat4 projMat;
 void main()
 {
 	gl_Position = projMat * viewMat * modelMat * vec4(aPos.x,aPos.y,aPos.z, 1.0);
+	fragPos = (modelMat * vec4(aPos.x,aPos.y,aPos.z, 1.0)).xyz; 
 	normal = mat3(modelMat) * aNormal;
     // gl_Position = transform * vec4(aPos.x,aPos.y,aPos.z, 1.0);
     // vertexColor = vec4(aColor.x,aColor.y,aColor.z,1.0); // 将ourColor设置为我们从顶点数据那里得到的输入颜色

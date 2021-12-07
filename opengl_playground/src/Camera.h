@@ -19,6 +19,8 @@ public:
 	glm::vec3 WorldUp;
 	float Yaw;
 	float Pitch;
+	float SpeedX = 0;
+	float SpeedY = 0;
 	float SpeedZ = 0;
 
 	glm::mat4 GetViewMatrix();

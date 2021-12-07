@@ -51,5 +51,5 @@ void Camera::updateCameraVectors() {
 };
 
 void Camera::UpdateCameraPosition() {
-	Position += glm::vec3(0, 0, SpeedZ*0.1f);
+	Position += Forward * SpeedZ*0.1f + Right * SpeedX * 0.1f + Up * SpeedY * 0.1f;
 };
