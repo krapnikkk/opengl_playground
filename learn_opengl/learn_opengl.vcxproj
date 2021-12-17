@@ -135,7 +135,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\4_3_transformations\transformations.cpp" />
+    <ClCompile Include="src\6_3_coordinate_systems_multiple\coordinate_systems_multiple.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="includes\headers\shader_m.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

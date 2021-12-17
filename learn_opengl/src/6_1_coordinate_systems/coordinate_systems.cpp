@@ -2,7 +2,7 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
-#include "../../includes/headers/shader_s.h";
+#include "../../includes/headers/shader_m.h";
 #define STB_IMAGE_IMPLEMENTATION
 #include "../../includes/headers/stb_image.h";
 
@@ -68,7 +68,7 @@ int main()
 	}
 
 
-	Shader shader("src/4_3_transformations/shader.vert", "src/4_3_transformations/shader.frag");
+	Shader shader("src/6_1_coordinate_systems/shader.vert", "src/6_1_coordinate_systems/shader.frag");
 
 	// set up vertex data (and buffer(s)) and configure vertex attributes
 	// ------------------------------------------------------------------
@@ -136,25 +136,22 @@ int main()
 		glActiveTexture(GL_TEXTURE1);
 		glBindTexture(GL_TEXTURE_2D, TexBuffer2);
 
-		glm::mat4 transform = glm::mat4(1.0f);
-		transform = glm::rotate(transform, (float)glfwGetTime(), glm::vec3(0.0f, 0.0f, 1.0f));
-		transform = glm::translate(transform, glm::vec3(0.5f, -0.5f, 0.0f));
-
 		shader.use();
 
-		unsigned int transformLocation = glGetUniformLocation(shader.ID, "transform");
-		glUniformMatrix4fv(transformLocation, 1, GL_FALSE, glm::value_ptr(transform));
+		glm::mat4 model = glm::mat4(1.0f);
+		glm::mat4 projection = glm::mat4(1.0f);
+		glm::mat4 view = glm::mat4(1.0f);
+		model = glm::rotate(model, glm::radians(-55.0f), glm::vec3(1.0f, 0.0f, 0.0f));
+		view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f));
+		projection = glm::perspective(glm::radians(45.0f),(float)SCR_WIDTH/(float)SCR_HEIGHT,0.1f,100.0f);
+		unsigned int modelLocation = glGetUniformLocation(shader.ID, "model");
+		unsigned int viewLocation = glGetUniformLocation(shader.ID, "view");
+		glUniformMatrix4fv(modelLocation, 1, GL_FALSE, glm::value_ptr(model));
+		glUniformMatrix4fv(viewLocation, 1, GL_FALSE, &view[0][0]);
+		shader.setMat4("projection",projection);
+
 
 		glBindVertexArray(VAO);
-
-		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-
-		transform = glm::mat4(1.0f);
-		transform = glm::translate(transform, glm::vec3(-0.5f, 0.5f, 0.0f));
-		float scaleAmount = sin(glfwGetTime());
-		transform = glm::scale(transform,glm::vec3(scaleAmount, scaleAmount, scaleAmount));
-		glUniformMatrix4fv(transformLocation, 1, GL_FALSE, &transform[0][0]);
-
 		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
 		// glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
