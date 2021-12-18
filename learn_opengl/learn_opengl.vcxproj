@@ -135,9 +135,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\6_3_coordinate_systems_multiple\coordinate_systems_multiple.cpp" />
+    <ClCompile Include="src\7_3_camera_mouse_zoom\camera_mouse_zoom.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="includes\headers\camera.h" />
     <ClInclude Include="includes\headers\shader_m.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
