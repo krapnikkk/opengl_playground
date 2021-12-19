@@ -135,11 +135,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\7_3_camera_mouse_zoom\camera_mouse_zoom.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="includes\headers\camera.h" />
     <ClInclude Include="includes\headers\shader_m.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\2.lighting\1_1_color\color.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\2.lighting\1_1_color\light_cube.frag" />
+    <None Include="src\2.lighting\1_1_color\light_cube.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

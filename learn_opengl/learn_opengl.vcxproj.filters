@@ -15,16 +15,20 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\7_3_camera_mouse_zoom\camera_mouse_zoom.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="includes\headers\shader_m.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="includes\headers\camera.h">
       <Filter>头文件</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\2.lighting\1_1_color\color.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\2.lighting\1_1_color\light_cube.vert" />
+    <None Include="src\2.lighting\1_1_color\light_cube.frag" />
   </ItemGroup>
 </Project>
