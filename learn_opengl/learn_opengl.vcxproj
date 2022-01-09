@@ -139,9 +139,6 @@
     <ClInclude Include="includes\headers\shader_m.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\2.lighting\3_1_materials\materials.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="src\2.lighting\1_1_color\light_cube.frag" />
     <None Include="src\2.lighting\1_1_color\light_cube.vert" />
     <None Include="src\2.lighting\2_1_basic_lighting_diffuse\light_cube.frag" />
@@ -150,6 +147,9 @@
     <None Include="src\2.lighting\2_2_basic_lighting_specular\light_cube.vert" />
     <None Include="src\2.lighting\3_1_materials\light_cube.frag" />
     <None Include="src\2.lighting\3_1_materials\light_cube.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\2.lighting\5_2_lighting_casters_point\lighting_casters_point.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

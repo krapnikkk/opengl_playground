@@ -180,21 +180,20 @@ int main()
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-		//lightPos.x = 1.0f + sin(glfwGetTime())*2.0f;
-		//lightPos.y = sin(glfwGetTime() / 2.0f)*1.0f;
-
 		shader.use();
 		// light
 		shader.setVec3("light.ambient", 0.2f, 0.2f, 0.2f);
 		shader.setVec3("light.diffuse", 0.5f, 0.5f, 0.5f);
 		shader.setVec3("light.specular", 1.0f, 1.0f, 1.0f);
+		shader.setFloat("light.constant", 1.0f);
+		shader.setFloat("light.linear", 0.09f);
+		shader.setFloat("light.quadratic", 0.032f);
 
 		// material
-		shader.setFloat("material.shininess", 2.0f);
+		shader.setFloat("material.shininess", 64.0f);
 
-		shader.setVec3("light.direction", lightDir);
+		shader.setVec3("light.position", lightPos);
 		shader.setVec3("viewPos", camera.Position);
-
 
 		glm::mat4 projection = glm::mat4(1.0f);
 		projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
@@ -225,16 +224,16 @@ int main()
 			glDrawArrays(GL_TRIANGLES, 0, 36);
 		}
 
-		//lightCubeShader.use();
-		//lightCubeShader.setMat4("projection", projection);
-		//lightCubeShader.setMat4("view", view);
-		//model = glm::mat4(1.0f);
-		//model = glm::translate(model, lightPos); // 作为光源设置
-		//model = glm::scale(model, glm::vec3(0.2f)); // a smaller cube
-		//lightCubeShader.setMat4("model", model);
+		lightCubeShader.use();
+		lightCubeShader.setMat4("projection", projection);
+		lightCubeShader.setMat4("view", view);
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, lightPos); // 作为光源设置
+		model = glm::scale(model, glm::vec3(0.2f)); // a smaller cube
+		lightCubeShader.setMat4("model", model);
 
-		//glBindVertexArray(lightCubeVAO);
-		//glDrawArrays(GL_TRIANGLES, 0, 36);
+		glBindVertexArray(lightCubeVAO);
+		glDrawArrays(GL_TRIANGLES, 0, 36);
 
 		// glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
 		// -------------------------------------------------------------------------------
