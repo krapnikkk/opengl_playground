@@ -149,7 +149,7 @@
     <None Include="src\2.lighting\3_1_materials\light_cube.vert" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\2.lighting\5_4_lighting_casters_spot_soft\lighting_casters_spot_soft.cpp" />
+    <ClCompile Include="src\2.lighting\6_1_multiple_lights\multiple_lights.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
