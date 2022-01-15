@@ -43,7 +43,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\3.model\3_1_load_model\load_model.cpp">
+    <ClCompile Include="src\4.advanced_opengl\1_1_depth_testing\depth_testing.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

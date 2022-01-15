@@ -153,7 +153,7 @@
     <None Include="src\2.lighting\3_1_materials\light_cube.vert" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\3.model\3_1_load_model\load_model.cpp" />
+    <ClCompile Include="src\4.advanced_opengl\1_1_depth_testing\depth_testing.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
