@@ -155,7 +155,7 @@
     <None Include="src\4.advanced_opengl\2_1_stencil_testing\single_color.frag" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\3.model\3_1_load_model\load_model.cpp" />
+    <ClCompile Include="src\4.advanced_opengl\3_2_blending_sort\blending_sort.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
