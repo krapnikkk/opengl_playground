@@ -1,6 +1,7 @@
-#pragma once
+#ifndef MODEL_H
+#define MODEL_H
 
-#include "./shader_m.h"
+#include "./shader.h"
 #include "./mesh.h"
 // assimp
 #include <assimp/Importer.hpp>
@@ -217,3 +218,5 @@ unsigned int TextureFromFile(const char *path, const string &directory, bool gam
 
 	return textureID;
 }
+
+#endif

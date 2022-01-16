@@ -30,6 +30,9 @@
     <ClInclude Include="includes\headers\stb_image.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="includes\headers\shader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="src\2.lighting\1_1_color\light_cube.vert" />
@@ -41,9 +44,10 @@
     <None Include="src\2.lighting\3_1_materials\light_cube.frag" />
     <None Include="src\2.lighting\3_1_materials\light_cube.vert" />
     <None Include="packages.config" />
+    <None Include="src\4.advanced_opengl\2_1_stencil_testing\single_color.frag" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\4.advanced_opengl\1_1_depth_testing\depth_testing.cpp">
+    <ClCompile Include="src\3.model\3_1_load_model\load_model.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
