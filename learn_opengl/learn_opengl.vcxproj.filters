@@ -47,7 +47,7 @@
     <None Include="src\4.advanced_opengl\2_1_stencil_testing\single_color.frag" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\4.advanced_opengl\3_2_blending_sort\blending_sort.cpp">
+    <ClCompile Include="src\4.advanced_opengl\5_1_framebuffers\framebuffers.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
