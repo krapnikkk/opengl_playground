@@ -68,8 +68,8 @@ int main()
 
 	glEnable(GL_DEPTH_TEST);
 
-	Shader shader("src/4.advanced_opengl/6_1_cubeMaps/shader.vert", "src/4.advanced_opengl/6_1_cubeMaps/shader.frag");
-	Shader skyboxShader("src/4.advanced_opengl/6_1_cubeMaps/skybox.vert", "src/4.advanced_opengl/6_1_cubeMaps/skybox.frag");
+	Shader shader("src/4.advanced_opengl/6_1_cubeMaps_skybox/shader.vert", "src/4.advanced_opengl/6_1_cubeMaps_skybox/shader.frag");
+	Shader skyboxShader("src/4.advanced_opengl/6_1_cubeMaps_skybox/skybox.vert", "src/4.advanced_opengl/6_1_cubeMaps_skybox/skybox.frag");
 
 	// set up vertex data (and buffer(s)) and configure vertex attributes
 	// ------------------------------------------------------------------
@@ -246,6 +246,7 @@ int main()
 		glBindVertexArray(0);
 
 		// draw skybox as last
+		//天空盒在值小于或等于深度缓冲时通过深度测试
 		glDepthFunc(GL_LEQUAL);  // change depth function so depth test passes when values are equal to depth buffer's content
 		skyboxShader.use();
 		view = glm::mat4(glm::mat3(camera.GetViewMatrix())); // remove translation from the view matrix
