@@ -45,9 +45,11 @@
     <None Include="src\2.lighting\3_1_materials\light_cube.vert" />
     <None Include="packages.config" />
     <None Include="src\4.advanced_opengl\2_1_stencil_testing\single_color.frag" />
+    <None Include="src\4.advanced_opengl\8_1_advanced_glsl_ubo\red.frag" />
+    <None Include="src\4.advanced_opengl\8_1_advanced_glsl_ubo\shader.vert" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\4.advanced_opengl\5_1_framebuffers\framebuffers.cpp">
+    <ClCompile Include="src\4.advanced_opengl\8_1_advanced_glsl_ubo\advanced_glsl_ubo.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
