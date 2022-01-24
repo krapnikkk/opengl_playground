@@ -47,9 +47,16 @@
     <None Include="src\4.advanced_opengl\2_1_stencil_testing\single_color.frag" />
     <None Include="src\4.advanced_opengl\8_1_advanced_glsl_ubo\red.frag" />
     <None Include="src\4.advanced_opengl\8_1_advanced_glsl_ubo\shader.vert" />
+    <None Include="src\4.advanced_opengl\9_1_geometry_shader_houses\shader.vert" />
+    <None Include="src\4.advanced_opengl\9_1_geometry_shader_houses\shader.frag" />
+    <None Include="src\4.advanced_opengl\9_1_geometry_shader_houses\shader.geom" />
+    <None Include="src\4.advanced_opengl\10_1_Instancing_quads\shader.frag" />
+    <None Include="src\4.advanced_opengl\10_1_Instancing_quads\shader.vert" />
+    <None Include="src\4.advanced_opengl\10_2_asteroids\shader.frag" />
+    <None Include="src\4.advanced_opengl\10_2_asteroids\shader.vert" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\4.advanced_opengl\8_1_advanced_glsl_ubo\advanced_glsl_ubo.cpp">
+    <ClCompile Include="src\4.advanced_opengl\10_2_asteroids\asteroids.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
