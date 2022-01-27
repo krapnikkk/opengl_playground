@@ -26,7 +26,12 @@ unsigned int TextureFromFile(const char *path, const string &directory, bool gam
 class Model
 {
 public:
-    /*  函数   */
+	/*  模型数据  */
+	vector<Mesh> meshes;
+	vector<Texture> textures_loaded; // 储存纹理
+
+
+	/*  函数   */
     Model(string path)
     {
         loadModel(path);
@@ -37,10 +42,8 @@ public:
 			meshes[i].Draw(shader);
 	}
 private:
-    /*  模型数据  */
-    vector<Mesh> meshes;
+    
     string directory;
-	vector<Texture> textures_loaded; // 储存纹理
     /*  函数   */
 	void loadModel(string path) {
 		Assimp::Importer importer;

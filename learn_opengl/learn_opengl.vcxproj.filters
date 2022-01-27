@@ -56,7 +56,7 @@
     <None Include="src\4.advanced_opengl\10_2_asteroids\shader.vert" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\4.advanced_opengl\10_2_asteroids\asteroids.cpp">
+    <ClCompile Include="src\4.advanced_opengl\10_3_asteroids_instanced\asteroids_instanced.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

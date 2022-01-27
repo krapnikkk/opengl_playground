@@ -164,7 +164,7 @@
     <None Include="src\4.advanced_opengl\9_1_geometry_shader_houses\shader.vert" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\4.advanced_opengl\10_2_asteroids\asteroids.cpp" />
+    <ClCompile Include="src\4.advanced_opengl\10_3_asteroids_instanced\asteroids_instanced.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
