@@ -156,6 +156,10 @@
     <None Include="src\4.advanced_opengl\10_1_Instancing_quads\shader.vert" />
     <None Include="src\4.advanced_opengl\10_2_asteroids\shader.frag" />
     <None Include="src\4.advanced_opengl\10_2_asteroids\shader.vert" />
+    <None Include="src\4.advanced_opengl\11_1_anti_aliasing_msaa\shader.frag" />
+    <None Include="src\4.advanced_opengl\11_1_anti_aliasing_msaa\shader.vert" />
+    <None Include="src\4.advanced_opengl\11_2_anti_aliasing_offscreen\shader.frag" />
+    <None Include="src\4.advanced_opengl\11_2_anti_aliasing_offscreen\shader.vert" />
     <None Include="src\4.advanced_opengl\2_1_stencil_testing\single_color.frag" />
     <None Include="src\4.advanced_opengl\8_1_advanced_glsl_ubo\red.frag" />
     <None Include="src\4.advanced_opengl\8_1_advanced_glsl_ubo\shader.vert" />
@@ -164,7 +168,7 @@
     <None Include="src\4.advanced_opengl\9_1_geometry_shader_houses\shader.vert" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\4.advanced_opengl\10_3_asteroids_instanced\asteroids_instanced.cpp" />
+    <ClCompile Include="src\4.advanced_opengl\11_2_anti_aliasing_offscreen\anti_aliasing_offscreen.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
