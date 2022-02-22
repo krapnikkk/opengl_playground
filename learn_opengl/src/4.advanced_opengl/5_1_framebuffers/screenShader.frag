@@ -8,11 +8,11 @@ const float offset = 1.0 / 300.0;
 
 void main()
 {
-	vec3 texColor = texture(uSampler, TexCoords).rgb;
-    FragColor = vec4(texColor,1.0);
+//	vec3 texColor = texture(uSampler, TexCoords).rgb;
+//    FragColor = vec4(texColor,1.0);
 
 	//∑¥œ‡
-//	FragColor = vec4(vec3(1.0 - texture(uSampler, TexCoords)), 1.0);
+	FragColor = vec4(vec3(1.0 - texture(uSampler, TexCoords)), 1.0);
 
 	// ª“∂»
 //	FragColor = texture(uSampler, TexCoords);

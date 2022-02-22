@@ -58,9 +58,31 @@
     <None Include="src\4.advanced_opengl\11_1_anti_aliasing_msaa\shader.vert" />
     <None Include="src\4.advanced_opengl\11_2_anti_aliasing_offscreen\shader.frag" />
     <None Include="src\4.advanced_opengl\11_2_anti_aliasing_offscreen\shader.vert" />
+    <None Include="src\5.advanced_lighting\5_3_1_shadow_mapping_depth\debug_quad.vert" />
+    <None Include="src\5.advanced_lighting\5_3_1_shadow_mapping_depth\debug_quad.frag" />
+    <None Include="src\5.advanced_lighting\5_3_2_shadow_mapping_base\debug_quad.frag" />
+    <None Include="src\5.advanced_lighting\5_3_2_shadow_mapping_base\debug_quad.vert" />
+    <None Include="src\5.advanced_lighting\5_3_2_shadow_mapping_base\shadow_mapping.frag" />
+    <None Include="src\5.advanced_lighting\5_3_2_shadow_mapping_base\shadow_mapping.vert" />
+    <None Include="src\5.advanced_lighting\5_3_3_shadow_mapping\debug_quad.frag" />
+    <None Include="src\5.advanced_lighting\5_3_3_shadow_mapping\debug_quad.vert" />
+    <None Include="src\5.advanced_lighting\5_3_3_shadow_mapping\shadow_mapping.frag" />
+    <None Include="src\5.advanced_lighting\5_3_3_shadow_mapping\shadow_mapping.vert" />
+    <None Include="src\5.advanced_lighting\5_4_1_point_shadow\point_shadows_depth.frag" />
+    <None Include="src\5.advanced_lighting\5_4_1_point_shadow\point_shadows_depth.vert" />
+    <None Include="src\5.advanced_lighting\5_4_1_point_shadow\point_shadows_depth.geom" />
+    <None Include="src\5.advanced_lighting\5_4_1_point_shadow\point_shadows.frag" />
+    <None Include="src\5.advanced_lighting\5_4_1_point_shadow\point_shadows.vert" />
+    <None Include="src\5.advanced_lighting\5_4_2_point_shadow_soft\point_shadows.frag" />
+    <None Include="src\5.advanced_lighting\5_4_2_point_shadow_soft\point_shadows.vert" />
+    <None Include="src\5.advanced_lighting\5_4_2_point_shadow_soft\point_shadows_depth.frag" />
+    <None Include="src\5.advanced_lighting\5_4_2_point_shadow_soft\point_shadows_depth.geom" />
+    <None Include="src\5.advanced_lighting\5_4_2_point_shadow_soft\point_shadows_depth.vert" />
+    <None Include="src\5.advanced_lighting\6_1_normal_mapping\normal_mapping.frag" />
+    <None Include="src\5.advanced_lighting\6_1_normal_mapping\normal_mapping.vert" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\4.advanced_opengl\11_2_anti_aliasing_offscreen\anti_aliasing_offscreen.cpp">
+    <ClCompile Include="src\5.advanced_lighting\6_1_normal_mapping\normal_mapping.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
