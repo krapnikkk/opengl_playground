@@ -71,8 +71,8 @@ int main()
 	glEnable(GL_DEPTH_TEST);
 
 	Shader shader(
-		"src/5.advanced_lighting/6_1_normal_mapping/normal_mapping.vert",
-		"src/5.advanced_lighting/6_1_normal_mapping/normal_mapping.frag"
+		"src/5.advanced_lighting/4_1_normal_mapping/normal_mapping.vert",
+		"src/5.advanced_lighting/4_1_normal_mapping/normal_mapping.frag"
 	);
 
 	unsigned int diffuseMap = loadTexture("assets/brickwall.jpg", false);

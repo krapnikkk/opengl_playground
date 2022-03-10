@@ -71,8 +71,8 @@ int main()
 	glEnable(GL_DEPTH_TEST);
 
 	Shader shader(
-		"src/5.advanced_lighting/5_1_advanced_lighting/shader.vert",
-		"src/5.advanced_lighting/5_1_advanced_lighting/shader.frag");
+		"src/5.advanced_lighting/1_1_advanced_lighting/shader.vert",
+		"src/5.advanced_lighting/1_1_advanced_lighting/shader.frag");
 	
 
 	float planeVertices[] = {

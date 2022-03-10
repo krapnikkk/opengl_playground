@@ -73,16 +73,16 @@ int main()
 	glEnable(GL_DEPTH_TEST);
 
 	Shader simpleDepthShader(
-		"src/5.advanced_lighting/5_3_3_shadow_mapping/shadow_mapping_depth.vert",
-		"src/5.advanced_lighting/5_3_3_shadow_mapping/shadow_mapping_depth.frag"
+		"src/5.advanced_lighting/3_1_2_shadow_mapping_base/shadow_mapping_depth.vert",
+		"src/5.advanced_lighting/3_1_2_shadow_mapping_base/shadow_mapping_depth.frag"
 	);
 	Shader debugDepthQuad(
-		"src/5.advanced_lighting/5_3_3_shadow_mapping/debug_quad.vert",
-		"src/5.advanced_lighting/5_3_3_shadow_mapping/debug_quad.frag"
+		"src/5.advanced_lighting/3_1_2_shadow_mapping_base/debug_quad.vert",
+		"src/5.advanced_lighting/3_1_2_shadow_mapping_base/debug_quad.frag"
 	);
 	Shader shader(
-		"src/5.advanced_lighting/5_3_3_shadow_mapping/shadow_mapping.vert",
-		"src/5.advanced_lighting/5_3_3_shadow_mapping/shadow_mapping.frag"
+		"src/5.advanced_lighting/3_1_2_shadow_mapping_base/shadow_mapping.vert",
+		"src/5.advanced_lighting/3_1_2_shadow_mapping_base/shadow_mapping.frag"
 	);
 
 

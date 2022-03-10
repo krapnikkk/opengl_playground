@@ -72,13 +72,13 @@ int main()
 	glEnable(GL_DEPTH_TEST);
 
 	Shader simpleDepthShader(
-		"src/5.advanced_lighting/5_4_2_point_shadow_soft/point_shadows_depth.vert",
-		"src/5.advanced_lighting/5_4_2_point_shadow_soft/point_shadows_depth.frag",
-		"src/5.advanced_lighting/5_4_2_point_shadow_soft/point_shadows_depth.geom"
+		"src/5.advanced_lighting/3_2_1_point_shadow/point_shadows_depth.vert",
+		"src/5.advanced_lighting/3_2_1_point_shadow/point_shadows_depth.frag",
+		"src/5.advanced_lighting/3_2_1_point_shadow/point_shadows_depth.geom"
 	);
 	Shader shader(
-		"src/5.advanced_lighting/5_4_2_point_shadow_soft/point_shadows.vert",
-		"src/5.advanced_lighting/5_4_2_point_shadow_soft/point_shadows.frag"
+		"src/5.advanced_lighting/3_2_1_point_shadow/point_shadows.vert",
+		"src/5.advanced_lighting/3_2_1_point_shadow/point_shadows.frag"
 	);
 
 	unsigned int woodTexture = loadTexture("assets/wood.png", false);
@@ -88,7 +88,7 @@ int main()
 	const unsigned int SHADOW_WIDTH = 1024, SHADOW_HEIGHT = 1024;
 	unsigned int depthMapFBO;
 	glGenFramebuffers(1, &depthMapFBO);
-
+	
 	unsigned int depthCubemap;
 	glGenTextures(1, &depthCubemap);
 	glBindTexture(GL_TEXTURE_CUBE_MAP, depthCubemap);
