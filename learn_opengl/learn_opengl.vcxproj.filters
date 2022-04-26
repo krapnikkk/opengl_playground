@@ -86,9 +86,16 @@
     <None Include="src\5.advanced_lighting\6_1_hdr\hdr.vert" />
     <None Include="src\5.advanced_lighting\6_1_hdr\lighting.frag" />
     <None Include="src\5.advanced_lighting\6_1_hdr\lighting.vert" />
+    <None Include="src\5.advanced_lighting\7_bloom\bloom.vs" />
+    <None Include="src\5.advanced_lighting\7_bloom\light_box.fs" />
+    <None Include="src\5.advanced_lighting\7_bloom\blur.fs" />
+    <None Include="src\5.advanced_lighting\7_bloom\blur.vs" />
+    <None Include="src\5.advanced_lighting\7_bloom\bloom_final.fs" />
+    <None Include="src\5.advanced_lighting\7_bloom\bloom_final.vs" />
+    <None Include="src\5.advanced_lighting\7_bloom\bloom.fs" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\5.advanced_lighting\6_1_hdr\hdr.cpp">
+    <ClCompile Include="src\5.advanced_lighting\7_bloom\bloom.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

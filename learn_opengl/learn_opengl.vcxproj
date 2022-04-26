@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -194,14 +194,21 @@
     <None Include="src\5.advanced_lighting\6_1_hdr\hdr.vert" />
     <None Include="src\5.advanced_lighting\6_1_hdr\lighting.frag" />
     <None Include="src\5.advanced_lighting\6_1_hdr\lighting.vert" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="src\5.advanced_lighting\6_1_hdr\hdr.cpp" />
+    <None Include="src\5.advanced_lighting\7_bloom\bloom.fs" />
+    <None Include="src\5.advanced_lighting\7_bloom\bloom.vs" />
+    <None Include="src\5.advanced_lighting\7_bloom\bloom_final.fs" />
+    <None Include="src\5.advanced_lighting\7_bloom\bloom_final.vs" />
+    <None Include="src\5.advanced_lighting\7_bloom\blur.fs" />
+    <None Include="src\5.advanced_lighting\7_bloom\blur.vs" />
+    <None Include="src\5.advanced_lighting\7_bloom\light_box.fs" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\..\LearnOpenGL\resources\textures\bricks2.jpg" />
     <Image Include="..\..\LearnOpenGL\resources\textures\bricks2_disp.jpg" />
     <Image Include="..\..\LearnOpenGL\resources\textures\bricks2_normal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\5.advanced_lighting\7_bloom\bloom.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
