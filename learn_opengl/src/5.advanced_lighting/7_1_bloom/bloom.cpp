@@ -74,23 +74,23 @@ int main()
 	glEnable(GL_DEPTH_TEST);
 
 	Shader shader(
-		"src/5.advanced_lighting/7_bloom/bloom.vs",
-		"src/5.advanced_lighting/7_bloom/bloom.fs"
+		"src/5.advanced_lighting/7_1_bloom/bloom.vs",
+		"src/5.advanced_lighting/7_1_bloom/bloom.fs"
 	);
 
 	Shader shaderLight(
-		"src/5.advanced_lighting/7_bloom/bloom.vs",
-		"src/5.advanced_lighting/7_bloom/light_box.fs"
+		"src/5.advanced_lighting/7_1_bloom/bloom.vs",
+		"src/5.advanced_lighting/7_1_bloom/light_box.fs"
 	);
 
 	Shader shaderBlur(
-		"src/5.advanced_lighting/7_bloom/blur.vs",
-		"src/5.advanced_lighting/7_bloom/blur.fs"
+		"src/5.advanced_lighting/7_1_bloom/blur.vs",
+		"src/5.advanced_lighting/7_1_bloom/blur.fs"
 	);
 
 	Shader shaderBloomFinal(
-		"src/5.advanced_lighting/7_bloom/bloom_final.vs",
-		"src/5.advanced_lighting/7_bloom/bloom_final.fs"
+		"src/5.advanced_lighting/7_1_bloom/bloom_final.vs",
+		"src/5.advanced_lighting/7_1_bloom/bloom_final.fs"
 	);
 
 	unsigned int woodTexture = loadTexture("assets/wood.png", true);
